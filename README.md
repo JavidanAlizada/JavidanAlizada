@@ -1,17 +1,44 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
+  <img alt="Javidan Alizada: Senior Software Engineer, distributed, high-concurrency, low-latency systems in Java" src="assets/banner-dark.svg" width="100%">
+</picture>
+
 <div align="center">
-
-# Hi, I'm Javidan 👋
-
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1000&color=58A6FF&center=true&vCenter=true&width=520&lines=Senior+Software+Engineer;Distributed+%26+Low-Latency+Systems;Java+%C2%B7+Kafka+%C2%B7+gRPC+%C2%B7+Kubernetes" alt="Typing SVG" />
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge)](https://www.linkedin.com/in/javidan-alizada-284781153/)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:javidanalizada99@gmail.com)
 
 </div>
 
-**Senior Software Engineer** with 8+ years building high-concurrency, low-latency distributed systems in **Java** for real-money platforms across iGaming, FinTech, Banking and GovTech. I care about correctness under load, clear ownership, and systems that are easy to observe and operate.
+<table align="center">
+  <tr>
+    <td align="center" width="150"><h2>300×</h2><sub>platform scalability</sub></td>
+    <td align="center" width="150"><h2>100K</h2><sub>concurrent clients</sub></td>
+    <td align="center" width="150"><h2>~85%</h2><sub>faster troubleshooting</sub></td>
+    <td align="center" width="150"><h2>~150%</h2><sub>performance gain</sub></td>
+    <td align="center" width="150"><h2>8+</h2><sub>years in production</sub></td>
+  </tr>
+</table>
 
----
+## 👨‍💻 About Me
+
+```java
+public record Engineer(String name, String role, int yearsOfExperience,
+                       List<String> domains, List<String> focus, String exploring) {}
+
+var javidan = new Engineer(
+    "Javidan Alizada",
+    "Senior Software Engineer",
+    8,
+    List.of("iGaming", "FinTech", "Banking", "GovTech"),
+    List.of("distributed systems", "high concurrency", "low latency",
+            "event-driven architecture", "observability"),
+    "Java 25 · virtual threads · structured concurrency"
+);
+```
+
+I build backend platforms for real-money, real-time workloads, where **correctness under load**, **predictable latency** and **operability** matter as much as features.
 
 ## ⚡ Highlights
 
@@ -21,7 +48,23 @@
 - ⚙️ JVM performance: **concurrency, lock-free algorithms**, GC tuning, reactive programming (WebFlux)
 - 🔍 Data & search: **Elasticsearch** indexing/query tuning, PostgreSQL & MongoDB optimization, Redis/Hazelcast caching
 
----
+## 🏗️ How I Design Real-Time Platforms
+
+```mermaid
+flowchart LR
+    C["👥 Clients<br/>100K concurrent"] -->|WebSocket| G["Gateway<br/>Netty · Vert.x"]
+    G -->|gRPC| GS["Game Services"]
+    G -->|gRPC| WS["Wallet Service"]
+    GS <-->|ZeroMQ| WS
+    GS -->|events| K[("Kafka")]
+    WS -->|Outbox · CDC| K
+    K --> AN["Analytics &<br/>Async Workflows"]
+    GS --> R[("Redis · Hazelcast")]
+    WS --> P[("PostgreSQL")]
+    OBS["📊 Prometheus · Grafana · Zipkin · ELK"] -.-> G & GS & WS
+```
+
+<sub>Reference architecture: horizontally scalable stateless gateways, low-latency service-to-service messaging, transactional event publishing, and end-to-end observability.</sub>
 
 ## 🧰 Tech Stack
 
@@ -43,8 +86,6 @@
 **Architecture**
 <br />![Microservices](https://img.shields.io/badge/Microservices-4A5568?style=for-the-badge) ![Event-Driven](https://img.shields.io/badge/Event--Driven-4A5568?style=for-the-badge) ![DDD](https://img.shields.io/badge/DDD-4A5568?style=for-the-badge) ![Hexagonal](https://img.shields.io/badge/Hexagonal-4A5568?style=for-the-badge) ![CQRS](https://img.shields.io/badge/CQRS-4A5568?style=for-the-badge) ![Saga](https://img.shields.io/badge/Saga-4A5568?style=for-the-badge) ![Outbox](https://img.shields.io/badge/Outbox-4A5568?style=for-the-badge)
 
----
-
 ## 📌 Featured Work
 
 | Project | What it shows |
@@ -54,7 +95,27 @@
 | 🎰 [**matrix-betting-game**](https://github.com/JavidanAlizada/matrix-betting-game) | Real-time betting game engine: probability-based symbol matrix, win combinations, bonus multipliers |
 | 📁 [**reactive-file-storage**](https://github.com/JavidanAlizada/reactive-file-storage) | Non-blocking file storage service: Spring WebFlux, reactive MongoDB & Redis, JWT security, OpenAPI, Docker |
 
----
+## 🧭 Journey
+
+| Period | Domain | Focus |
+|---|---|---|
+| **2024 – now** | 🎰 iGaming | Real-time game platforms, 100K-client scale, gRPC/ZeroMQ, observability |
+| **2023 – 2024** | 🏦 Banking | Risk & compliance services, Elasticsearch search, reactive APIs |
+| **2021 – 2023** | 🏛️ GovTech | National e-government platform, team leadership, performance (+150%) |
+| **2018 – 2021** | 💳 FinTech | Financial decision engine, event-driven microservices on Kafka |
+
+<details>
+<summary><b>🧠 Engineering principles I work by</b></summary>
+<br />
+
+- **Measure before optimizing.** Profiles, traces and load tests over intuition.
+- **Design for failure.** Timeouts, retries with jitter, circuit breakers and bulkheads by default.
+- **Make it observable.** If it isn't in a metric, a trace or a log, it doesn't exist in production.
+- **Own it end to end.** From design doc to deployment to on-call.
+- **Clear contracts.** Versioned APIs and explicit delivery semantics between services.
+- **Simple beats clever,** unless the latency budget says otherwise.
+
+</details>
 
 ## ✍️ Writing
 
@@ -65,7 +126,7 @@
 
 <div align="center">
 
-### 📬 Get in Touch
+**Let's talk about distributed systems, concurrency or real-time platforms.**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge)](https://www.linkedin.com/in/javidan-alizada-284781153/)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:javidanalizada99@gmail.com)
