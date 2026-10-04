@@ -13,7 +13,7 @@
 
 <table align="center">
   <tr>
-    <td align="center" width="150"><h2>300×</h2><sub>platform scalability</sub></td>
+    <td align="center" width="150"><h2>20×</h2><sub>platform scalability</sub></td>
     <td align="center" width="150"><h2>100K</h2><sub>concurrent clients</sub></td>
     <td align="center" width="150"><h2>~85%</h2><sub>faster troubleshooting</sub></td>
     <td align="center" width="150"><h2>~150%</h2><sub>performance gain</sub></td>
@@ -42,7 +42,7 @@ I build backend platforms for real-money, real-time workloads, where **correctne
 
 ## ⚡ Highlights
 
-- 🚀 Led the re-architecture of a real-time game platform → **300× scalability, 100,000 concurrent clients**
+- 🚀 Led the re-architecture of a real-time game platform → **20× scalability, 100,000 concurrent clients**
 - 🔭 Observability across JVM, gRPC, ZeroMQ & infra → **~85% faster troubleshooting**
 - 📨 Event-driven architecture: **Kafka & RabbitMQ pipelines**, Outbox, CDC, Saga, delivery semantics & backpressure
 - ⚙️ JVM performance: **concurrency, lock-free algorithms**, GC tuning, reactive programming (WebFlux)

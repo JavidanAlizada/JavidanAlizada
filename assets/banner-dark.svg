@@ -54,5 +54,5 @@
 <g class="n"><circle cx="960" cy="210" r="27" fill="#1f2937" stroke="#30363d" stroke-width="2"/><text x="960" y="214" text-anchor="middle" class="m" font-size="10" fill="#8b949e">events</text></g>
 <g class="n"><circle cx="1090" cy="120" r="30" fill="#1f2937" stroke="#3fb950" stroke-width="2"/><text x="1090" y="124" text-anchor="middle" class="m" font-size="10" fill="#8b949e">kafka</text></g>
 <g class="n"><circle cx="1090" cy="190" r="27" fill="#1f2937" stroke="#30363d" stroke-width="2"/><text x="1090" y="194" text-anchor="middle" class="m" font-size="10" fill="#8b949e">store</text></g>
-<text x="1140" y="276" text-anchor="end" class="m" font-size="12" fill="#8b949e">100,000 concurrent clients · 300× scale</text>
+<text x="1140" y="276" text-anchor="end" class="m" font-size="12" fill="#8b949e">100,000 concurrent clients · 20× scale</text>
 </g></svg>
