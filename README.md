@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
-  <img alt="Javidan Alizada: Senior Software Engineer, distributed, high-concurrency, low-latency systems in Java" src="assets/banner-dark.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark-v2.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light-v2.svg">
+  <img alt="Javidan Alizada: Senior Software Engineer, distributed, high-concurrency, low-latency systems in Java" src="assets/banner-dark-v2.svg" width="100%">
 </picture>
 
 <div align="center">
