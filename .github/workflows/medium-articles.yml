@@ -1,0 +1,27 @@
+name: Update Medium articles
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/update_articles.py
+      - name: Commit if changed
+        run: |
+          if ! git diff --quiet README.md; then
+            git config user.name "Javidan Alizada"
+            git config user.email "javidanalizada99@gmail.com"
+            git commit -am "Update Medium articles"
+            git push
+          fi

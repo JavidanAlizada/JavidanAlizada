@@ -119,8 +119,17 @@ flowchart LR
 
 ## ✍️ Writing
 
-<!-- Add article links here as you publish them -->
-- *Coming soon:* Building a lock-free MPSC queue on VarHandle
+<!-- ARTICLES:START -->
+| Article | Published |
+|---|---|
+| [Replication, Partitioning and Sharding, Explained Simply](https://medium.com/@javidanalizada99/replication-partitioning-and-sharding-explained-simply-bfd880ee576c) | Oct 13, 2026 |
+| [6 Resilience Patterns for Distributed Systems, Explained Simply](https://medium.com/@javidanalizada99/6-resilience-patterns-for-distributed-systems-explained-simply-7eca52e81113) | Oct 09, 2026 |
+| [Two Threads, Two Variables, Still Fighting: False Sharing in Java](https://medium.com/@javidanalizada99/two-threads-two-variables-still-fighting-false-sharing-in-java-7470fcb8bdb6) | Oct 07, 2026 |
+| [Your p99 Is Lying to You: Coordinated Omission and How to Measure Latency Honestly in Java](https://medium.com/@javidanalizada99/your-p99-is-lying-to-you-coordinated-omission-and-how-to-measure-latency-honestly-in-java-8506c5c2dcc8) | Oct 06, 2026 |
+| [Rate Limiting from First Principles: Fixed Window, Sliding Window, Token Bucket and GCRA in Java](https://medium.com/@javidanalizada99/rate-limiting-from-first-principles-fixed-window-sliding-window-token-bucket-and-gcra-in-java-228551401840) | Oct 04, 2026 |
+<!-- ARTICLES:END -->
+
+<sub>More on [Medium](https://medium.com/@javidanalizada99). This list updates automatically from the Medium feed.</sub>
 
 ---
 
