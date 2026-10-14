@@ -52,19 +52,25 @@ I build backend platforms for real-money, real-time workloads, where **correctne
 
 ```mermaid
 flowchart LR
-    C["👥 Clients<br/>100K concurrent"] -->|WebSocket| G["Gateway<br/>Netty · Vert.x"]
-    G -->|gRPC| GS["Game Services"]
-    G -->|gRPC| WS["Wallet Service"]
+    C["👥 Clients<br/>100K concurrent"] -->|WebSocket| LB["Load Balancer"]
+    subgraph GW["Gateways · auto-scaling"]
+        G1["Gateway 1<br/>Netty · Vert.x"]
+        G2["Gateway 2<br/>Netty · Vert.x"]
+        GN["Gateway N<br/>Netty · Vert.x"]
+    end
+    LB --> G1 & G2 & GN
+    GW -->|gRPC| GS["Game Services"]
+    GW -->|gRPC| WS["Wallet Service"]
     GS <-->|ZeroMQ| WS
     GS -->|events| K[("Kafka")]
     WS -->|Outbox · CDC| K
     K --> AN["Analytics &<br/>Async Workflows"]
     GS --> R[("Redis · Hazelcast")]
     WS --> P[("PostgreSQL")]
-    OBS["📊 Prometheus · Grafana · Zipkin · ELK"] -.-> G & GS & WS
+    OBS["📊 Prometheus · Grafana · Zipkin · ELK"] -.-> GW & GS & WS
 ```
 
-<sub>Reference architecture: horizontally scalable stateless gateways, low-latency service-to-service messaging, transactional event publishing, and end-to-end observability.</sub>
+<sub>Reference architecture: stateless gateways that auto-scale behind a load balancer, low-latency service-to-service messaging, transactional event publishing, and end-to-end observability.</sub>
 
 ## 🧰 Tech Stack
 
