@@ -128,6 +128,7 @@ flowchart LR
 <!-- ARTICLES:START -->
 | Article | Published |
 |---|---|
+| [CRDTs, Explained Simply](https://medium.com/@javidanalizada99/crdts-explained-simply-fd3b7a50e98a) | Nov 08, 2026 |
 | [Replication, Partitioning and Sharding, Explained Simply](https://medium.com/@javidanalizada99/replication-partitioning-and-sharding-explained-simply-bfd880ee576c) | Oct 13, 2026 |
 | [6 Resilience Patterns for Distributed Systems, Explained Simply](https://medium.com/@javidanalizada99/6-resilience-patterns-for-distributed-systems-explained-simply-7eca52e81113) | Oct 09, 2026 |
 | [Two Threads, Two Variables, Still Fighting: False Sharing in Java](https://medium.com/@javidanalizada99/two-threads-two-variables-still-fighting-false-sharing-in-java-7470fcb8bdb6) | Oct 07, 2026 |
